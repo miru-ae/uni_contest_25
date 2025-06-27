@@ -23,10 +23,16 @@ def generate_launch_description():
         param_file_arg,
 
         # Node Launcher for sector detection
+        # Node(
+        #     package='launcher_pkg',
+        #     executable='mk_node_launcher',
+        #     name='mk_node_launcher',
+        #     output='screen'
+        # ),
         Node(
-            package='launcher_pkg',
-            executable='mk_node_launcher',
-            name='mk_node_launcher',
+            package='rust_ws',
+            executable='mission_launcher',
+            name='mission_launcher',
             output='screen'
         ),
         
@@ -39,10 +45,16 @@ def generate_launch_description():
         ),
         
         # Reactive Follow Gap Node for LiDAR-based driving
+        # Node(
+        #     package='gap_follow',
+        #     executable='reactive_node',
+        #     name='reactive_node',
+        #     output='screen'
+        # ),
         Node(
-            package='gap_follow',
-            executable='reactive_node',
-            name='reactive_node',
+            package='rust_ws',
+            executable='mission_gap',
+            name='mission_gap',
             output='screen'
         ),
         
